@@ -9,7 +9,7 @@
 * [Contact](#contact)
 
 ## General info
-This plugin was written for website selling subsctription services. Plugin create new tabs at "My Account" page and fill them with content. Content is based on purchased items.
+Plugin create new tabs at "My Account" page and fill them with content. Content is based on purchased items.
 
 ## Technologies
 * PHP - version 7
@@ -22,7 +22,7 @@ This plugin was written for website selling subsctription services. Plugin creat
 * Tabs content differ depending on purchased product
 
 ## Status
-Project is finished and is part of running website. Some parts of code, datas and variables was changed before upload to my portfolio.
+Project is finished.
 
 ## Contact
 Created by [@olga-karpacz](studioafterglow.pl)
