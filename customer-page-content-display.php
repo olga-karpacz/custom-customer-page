@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:      Customer page content display
- * Description:      This plugin allows to display additional columns on shop customer "My account" page - some are determined by                       product purchased by customer.
+ * Description:      This plugin allows to display additional columns on shop customer "My account" page - some are determined by product purchased by customer.
  * Author:           Olga Aleksandra Karpacz
  * Author URI:       https://studioafterglow.pl/
  */
@@ -59,12 +59,6 @@ function cpcd_personalization_content() {
             case "golden-plan":
                 echo do_shortcode( '[contact-form-7 id="692" title="Personalization - golden"]' );
                 break;
-            case "multiaccount":
-                echo "<h1>User 1</h1>";
-                echo do_shortcode( '[contact-form-7 id="682" title="Personalization"]' );
-                echo "<h1 style='padding-top:30px'>User 2</h1>";
-                echo do_shortcode( '[contact-form-7 id="682" title="Personalization"]' );
-                break;
             default:
                 echo do_shortcode( '[contact-form-7 id="682" title="Personalization"]' );
         }
@@ -86,21 +80,7 @@ function cpcd_reports_content() {
     $customer_id = get_current_user_id(); 
     $last_order = wc_get_customer_last_order( $customer_id );
     if ( !empty( $last_order ) ) {
-        $items = $last_order->get_items();
-        $item = reset( $items );
-        $plan = $item->get_name();
-        $variation = new WC_Product_Variation( $item['variation_id'] );
-        $level = current( $variation->get_variation_attributes() );
-        switch( $level ){
-            case "multiaccount": //displaying 2 report forms for 2 users
-                echo "<h1>User 1</h1>";
-                echo do_shortcode( '[contact-form-7 id="555" title="Report"]' );
-                echo "<h1 style='padding-top:30px'>User 2</h1>";
-                echo do_shortcode( '[contact-form-7 id="555" title="Report"]' );
-                break;
-            default:
-                echo do_shortcode( '[contact-form-7 id="555" title="Report"]' );
-        }
+        echo do_shortcode( '[contact-form-7 id="555" title="Report"]' );
 ?>
 <script>
     (function($){
